@@ -9,7 +9,7 @@ p {
 	line-height: 1.5;
 	margin-bottom: 15px;
 	margin-top: 15px;
-	font-family: gotham light, arial;
+	font-family:'Montserrat', sans-serif, arial;
 	letter-spacing: 1px;
 	text-align: justify;
 	font-size: 14px;
@@ -37,13 +37,15 @@ header {
 	text-transform: uppercase;
 	background-color:#d2d2d2;
 	padding: 25px 0px 25px 0px;
+	height: 100px;
 }
 
 .title {
 	font-size: 42px;
-	font-family: gotham bold, arial black, arial;
+	font-family:'gotham bold', arial black, arial;
 	letter-spacing: 2px;
 	text-align: center;
+	margin-top: 0px;
 
 
 }
@@ -52,7 +54,7 @@ header {
 li {
 	display: inline;
 	padding:0px 10px 0px 10px;
-	font-family: gotham medium, gotham, arial;
+	font-family: 'Montserrat', sans-serif,'gotham', arial;
 	letter-spacing: 1px;
 }
 
@@ -67,13 +69,17 @@ a:hover {
 }
 
 h1,h2,h3,h4 {
-	font-family: gotham medium, gotham, arial;
+	font-family: 'gotham medium', 'gotham', arial;
 	text-transform: uppercase;
 
 }
 
 h1{
 	text-align: center;
+}
+
+h2 {
+	margin-bottom: 15px
 }
 
 
@@ -89,7 +95,7 @@ h1{
 .job {
 	display: list-item;
 	list-style-type: none;
-	padding-top: 15px;
+	padding-top: 0px;
 	padding-bottom:15px; 
 }
 
@@ -105,7 +111,7 @@ h1{
 	display: inline;
 	color: #5f5f5f;
 	font-size: 14px;
-	font-family: gotham light, arial;
+	font-family: 'Montserrat', sans-serif, 'gotham light', arial;
 }
 
 .years {
@@ -123,7 +129,7 @@ h1{
 .education {
 	display: list-item;
 	list-style-type: none;
-	padding-top: 15px;
+	padding-top: 0px;
 	padding-bottom:15px; 
 }
 
