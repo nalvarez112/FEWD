@@ -41,15 +41,6 @@ header {
 	height: 100px;
 }
 
-.title {
-	font-size: 42px;
-	font-family:'gotham bold', arial black, arial;
-	letter-spacing: 2px;
-	text-align: center;
-	margin-top: 0px;
-
-
-}
 
 
 li {
@@ -77,11 +68,25 @@ h1,h2,h3,h4 {
 
 h1{
 	text-align: center;
+	font-size: 42px;
+	font-family:'gotham bold', arial black, arial;
+	letter-spacing: 2px;
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 15px;
 }
 
 h2 {
-	margin-bottom: 15px
+	margin-bottom: 15px;
+	text-align: center;
 }
+
+h3 {
+	text-align: left;
+	font-size: 16px;
+}
+
+
 
 
 /*Content */
@@ -91,6 +96,11 @@ h2 {
 	max-width:980px;
 	margin:25px auto 25px auto;
 
+}
+
+.resumeSection {
+	padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .job {
@@ -104,7 +114,7 @@ h2 {
 	display: inline;
 	font-family: gotham bold, arial black;
 	color:#1A1A1A;
-	font-size: 16px;
+	font-size: 14px;
 
 }
  
@@ -118,6 +128,7 @@ h2 {
 .years {
 	display: inline;
 	color: #8d8d8d;
+	font-size: 14px;
 
 
 }
@@ -139,6 +150,7 @@ h2 {
 	padding-top: 15px;
 	padding-bottom:15px;
 }
+
 
 .aboutImg {
 	display: block;
@@ -202,7 +214,7 @@ footer {
         text-align: center;
         }
 
-     .socila {
+     .social {
      	display: block;
      	max-width: 100%;
      	text-align: center;
