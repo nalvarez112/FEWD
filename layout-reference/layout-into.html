@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Layout Intro</title>
+
+
+
+<style>
+
+
+/*rest section*/
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin:0px;
+}
+
+table {
+
+	border-collapse: collapse;
+}
+
+
+/*style section*/
+
+
+h3 {
+
+	color:cadetblue;
+}
+
+
+/*TABLE LAYOUT*/
+
+
+
+
+td {
+	background: skyblue;
+	padding: 10px;
+
+}
+
+/*FLOAT LAYOUT*/
+
+header {
+	overflow: hidden;
+
+}
+
+.three-columns div {
+	width: 33.333333%;
+
+}
+
+div {
+	box-sizing: border-box;
+}
+
+div {
+
+	float: left;
+	background: tan;
+	padding:10px;
+
+}
+
+
+
+/*FLEX BOX*/
+main {
+	display: flex;
+
+}
+
+section {
+	background: rosybrown;
+	color: navajowhite;
+	padding: 10px;
+
+
+}
+
+/*Flexbox 3-colum*/
+
+.three-columns section {
+	flex:1;
+}
+
+/*absolute positioning*/
+footer {
+	background: linear-gradient(to bottom, #efc5ca 0%,#ba2737 48%,#d24b5a 78%,#f18e99 100%);
+	width: 100%;
+	height: 200px;
+	position: relative;
+
+}
+
+footer p {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	bottom: 40px;
+	left: 200px;
+}
+
+
+/*SIDE BAR*/
+
+
+.sidebar {
+	width: 200px;
+	background:darksalmon;
+
+}
+
+
+.main {
+	flex: 2;
+	background: grey;
+
+}
+
+.column {
+
+	flex: 1;
+}
+
+
+</style>
+
+
+
+</head>
+<body>
+
+	<h1>Layout Intro</h1>
+
+
+	<h2>Table Layout</h2>
+
+		<table>
+			
+			<tr>
+				<td>Column 1</td>
+				<td>Column 2</td>
+				<td>Column 3</td>
+			</tr>
+
+
+		</table>
+
+
+		<h2>Float Layout</h2>
+		<header>
+			<div> Column 1</div>
+			<div> Column 2</div>
+			<div> Column 3</div>
+		</header>
+
+		<h3>~*~*~*~* USE THESE BELOW *~*~*~*~</h3>
+
+		<h2>Three Column Layout</h2>
+
+
+		<header class="three-columns">
+			<div> Column 1</div>
+			<div> Column 2</div>
+			<div> Column 3</div>
+		</header>
+
+
+		<h2>Flex Box</h2>
+
+		<main >
+			<section>Column 1</section>
+			<section>Column 2</section>
+			<section>Column 3</section>
+		</main>
+
+
+		<h2>full-width 3-column Flex Box</h2>
+
+		<main class="three-columns">
+			<section>Column 1</section>
+			<section>Column 2</section>
+			<section>Column 3</section>
+		</main>
+
+		<h2>Sidebar Flexbox Layout</h2>
+
+		<main>
+			<section class="sidebar">Sidebar</section>
+			<section class="column">Column 1</section>
+			<section class="main">Main</section>
+			<section class="column">Column 3</section>
+		</main>
+
+
+
+
+
+		<h2>Absolute positioning</h2>
+
+		<footer>
+
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. 
+			</p>
+			
+
+		</footer>
+
+
+
+
+</body>
+</html>
