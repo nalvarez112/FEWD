@@ -43,12 +43,15 @@ header {
 
 
 
-li {
+
+header li {
 	display: inline;
 	padding:0px 10px 0px 10px;
 	font-family: 'gotham', arial;
 	letter-spacing: 1px;
 }
+
+
 
 a {
 	text-decoration: none;
@@ -92,7 +95,7 @@ h3 {
 /*Content */
 /* ----------------------- */
 
-.content {
+div {
 	max-width:980px;
 	padding: 0 25px;
 	margin:25px auto;
@@ -130,12 +133,19 @@ h3 {
 	display: inline;
 	color: #8d8d8d;
 	font-size: 14px;
+	font-family: 'gotham', 'gotham light', arial;
 
 
 }
 
 .explain {
 	display: block;
+	font-family: 'gotham', 'gotham light', arial;
+	padding-top: 15px;
+	padding-left: 15px;
+	letter-spacing: 1px;
+	font-size: 14px;
+
 
 }
 
@@ -144,12 +154,14 @@ h3 {
 	list-style-type: none;
 	padding-top: 0px;
 	padding-bottom:15px; 
+	font-family: 'gotham', 'gotham light', arial;
 }
 
 .school {
 	display: block;
 	padding-top: 15px;
 	padding-bottom:15px;
+	font-family: 'gotham', 'gotham light', arial;
 }
 
 
@@ -203,8 +215,16 @@ footer {
 	float: left;
 }
 
-.social {
-	float: right;
+
+footer li {
+	display: inline;
+	padding:0px 10px 0px 10px;
+	font-family: 'gotham', arial;
+	letter-spacing: 1px;
+}
+
+footer li {
+	float:right;
 }
 
 
