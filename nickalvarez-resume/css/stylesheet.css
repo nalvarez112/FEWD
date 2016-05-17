@@ -192,6 +192,31 @@ div {
 
 }
 
+.bottomImg {
+	display: flex;
+	padding:0px;
+
+}
+
+.bottomImgs{
+
+	flex: 1;
+	width: 33%;
+	margin-bottom: 25px;
+	border-radius: 50%;
+	
+	
+}
+
+
+.bottomImgs:hover{
+
+	background:#000000;
+	opacity: 0.5;
+	
+}
+
+
 
 
 
