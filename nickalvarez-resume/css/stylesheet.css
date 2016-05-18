@@ -36,7 +36,7 @@ header {
 	
 	text-align: center;
 	text-transform: uppercase;
-	background-color:#d2d2d2;
+	background:#d2d2d2;
 	padding: 25px 0px 25px 0px;
 	height: 100px;
 }
@@ -49,6 +49,7 @@ header li {
 	padding:0px 10px 0px 10px;
 	font-family: 'gotham', arial;
 	letter-spacing: 1px;
+	background-color: #d2d2d2;
 }
 
 
@@ -77,6 +78,7 @@ h1{
 	text-align: center;
 	margin-top: 0px;
 	margin-bottom: 15px;
+	background-color: #d2d2d2;
 }
 
 h2 {
@@ -192,24 +194,34 @@ div {
 
 }
 
+
+
 .bottomImg {
 	display: flex;
 	padding:0px;
 
 }
 
-.bottomImgs{
+.bottomImg div {
+	padding: 0px;
+	display: inline-flex;
 
-	flex: 1;
-	width: 33%;
-	margin-bottom: 25px;
-	border-radius: 50%;
+}
+
+.bottomImg div img {
+
+	margin: 0 auto;
+}
+
+.icons{
+	border-radius: 50%;	
+	width: 50%;
+	height: 50%
 	
 	
 }
 
-
-.bottomImgs:hover{
+.icons:hover{
 
 	background:#000000;
 	opacity: 0.5;
