@@ -111,4 +111,39 @@ ol {
 		padding-bottom: 15px;
 	}
 
+
+
+
+	/*MEDIA QUERY*/
+
+
+	@media (max-width: 800px) {
+
+		.container {
+			flex-direction: column;
+
+		}
+
+		.times {
+			flex-direction: column;
+		}
+
+		h1,
+		.who {
+			text-align: center;
+
+		}
+
+
+
+
+	}
+
+
+
+
+
+
+
+
 		
