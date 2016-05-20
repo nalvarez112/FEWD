@@ -1,6 +1,209 @@
 * {
 	box-sizing: border-box;
-	margin-bottom: 0;
+	margin: 0;
 	padding: 0;
 	
 }
+
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+
+/*
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Merriweather', serif;
+font-family: 'Oswald', sans-serif;
+*/
+
+
+/*HEADER*/
+
+header {
+	color: #ffffff;
+	background:#000000;
+	border-bottom:4px solid #F8FD37;
+	padding:15px 30px;
+	letter-spacing: 1px
+
+}
+
+
+h1 {
+	color: #F8FD37;
+	letter-spacing: 2px;
+	font-family: 'Merriweather', serif;
+	padding-bottom: 15px;
+}
+
+
+header ul {
+	display: flex;
+	list-style-type: none;
+	justify-content: flex-end;
+	padding-bottom: 15px;
+
+
+}
+
+header ul li {
+	
+	font-family: 'Source Sans Pro', sans-serif;
+	margin:0 15px;
+
+}
+
+
+
+.find {
+	font-family: 'Oswald', sans-serif;
+}
+
+
+
+/*UNDER HEADER*/
+
+
+section {
+	background: #C6C6C6;
+}
+
+section p {
+	font-size: 24px;
+	padding:20px 0;
+	text-align: center;
+	font-family: 'Merriweather', serif;
+	font-style: italic;
+}
+
+section p span {
+	color: #999;
+	text-decoration: line-through;
+}
+
+section p em {
+
+	font-style: none;
+	border-bottom:2px solid #F8FD37;
+}
+
+
+
+
+.coworkers {
+	position: relative;
+}
+
+.coworkers img {
+	width:800px;
+}
+
+.meetMatch {
+	position: absolute;
+	width: 267px;
+    height: 325px;
+	padding: 30px;
+	border: 1px solid #000000;
+	background: rgba(255,255,255,0.8);
+	bottom: 30px;
+    right: 30px;
+}
+
+.meetMatch h2 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 30px;
+
+
+}
+
+.meetMatch p {
+	font-family: 'Source Sans Pro', sans-serif;
+	line-height: 1.4;
+
+}
+
+.meetMatch a {
+	font-family: 'Oswald', sans-serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: center;
+	background: #F8FD37;
+	border: 1px solid black;
+	padding: 10px 50px;
+	width: 100%;
+    display: block;
+    margin-top: 25px;
+    border-radius: 4px;
+
+
+}
+
+
+
+
+.options {
+	display: flex;
+	margin:15px 0;
+}
+
+.choices {
+	flex: 1;
+	padding: 25px;
+}
+
+
+.choices h2 {
+	font-family: 'Merriweather', serif;
+	font-size: 30px;
+
+
+}
+
+.choices p {
+	font-family: 'Source Sans Pro', sans-serif;
+	line-height: 1.4;
+
+}
+
+.choices a {
+	font-family: 'Oswald', sans-serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: center;
+	background: #C6C6C6;
+	padding: 10px 50px;
+	width: 100%;
+    display: block;
+    margin-top: 25px;
+    border-radius: 4px;
+    box-shadow: 0px 2px #999;
+
+
+}
+
+
+.choices:first-child {
+	border-right: 1px solid #999;
+
+
+}
+
+.choices:last-child {
+	border-left: 1px solid #999;
+
+
+}
+
+footer {
+	background: #000000
+}
+
+footer p {
+	color: #ffffff;
+	padding: 10px 15px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+
