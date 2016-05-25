@@ -101,11 +101,27 @@ img {
 	color: #999999;
 	float: left;
 	font-size: 150px;
-    line-height: 110px;
-    margin:0px 8px;
+    line-height: 60px;
+    margin:0px 8px 25px 0px;
     
 }
 
+
+
+.article2 {
+	font-size: 16px;
+	padding-bottom: 25px;
+	line-height: 35px;
+}
+
+.article2:first-letter {
+	color: #999999;
+	float: left;
+	font-size: 150px;
+    line-height: 60px;
+    margin:35px 8px 25px 0px;
+    
+}
 
 .continue {
 	text-align: right;
