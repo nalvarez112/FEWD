@@ -167,14 +167,19 @@ img {
     
 }
 
+
 .continue {
 	text-align: right;
+
+}
+
+.continue a {
 	text-decoration: none;
 	color:#DC3933;
 	font-weight: 700;
 	font-size: 18px;
-
 }
+
 
 
 
@@ -190,6 +195,27 @@ img {
 	line-height: 20px;
 }
 
+
+#popular li {
+	font-weight: 600;
+	color:#DC3933;
+
+}
+
+
+.more {
+	text-align: right;
+}
+
+.more a {
+	
+	text-decoration: none;
+	color:#DC3933;
+	font-weight: 700;
+	font-size: 18px;
+	
+
+}
 
 /*FOOTER*/
 
