@@ -15,7 +15,7 @@
 
 .main-content {
 	flex: 2;
-	padding-right: 45px;
+	margin-right: 45px;
 }
 
 .side-bar {
@@ -76,9 +76,7 @@ h4 {
 }
 
 
-.menu li:last-child {
-	margin-right:0;
-}
+
 
 
 .menu li:hover {
@@ -187,6 +185,7 @@ img {
 
 .side-content p {
 	line-height: 25px;
+	padding-bottom: 25px;
 }
 
 
@@ -194,6 +193,8 @@ img {
 	padding-left: 45px;
 	line-height: 20px;
 }
+
+
 
 
 #popular li {
@@ -271,7 +272,7 @@ footer p.copyright{
 
 	.main-content,
 	.side-bar {
-		padding: 0 25px;
+		margin: 0 25px;
 	}
 
 	header,
