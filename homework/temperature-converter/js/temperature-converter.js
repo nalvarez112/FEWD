@@ -11,14 +11,38 @@ var fahrenheit = document.querySelector (".fahrenheit");
 var celsius = document.querySelector (".celsius")
 var convert = document.querySelector (".convert");
 
+
+// SET UP
+
+var last;
+
 // EVENTS
 // --------------------------------------
-convert.addEventListener('click', fahrenheitToCelsius);
-convert.addEventListener('click', celsiusToFahrenheit);
+celsius.addEventListener('keyup', keyupCelsius);
+fahrenheit.addEventListener('keyup', keyupFahrenheit);
+convert.addEventListener('click', convertTemp);
 
 // EVENT HANDLER
 // --------------------------------------
+function keyupCelsius() {
+	last = "celsius";
+}
+function keyupFahrenheit() {
+	last = "fahrenheit";	
+}
+function convertTemp() {
+	console.log("fn convert");
 
+	if (last == "fahrenheit") {
+		fahrenheitToCelsius();
+	} else {
+		celsiusToFahrenheit();
+	}
+}
+
+
+// UPDATE PAGE
+// --------------------------------------
 function fahrenheitToCelsius () {
 
 	console.log("fn fahrenheitToCelsius");
@@ -31,14 +55,10 @@ function fahrenheitToCelsius () {
 
 
 	// do some work / processing
-
-		var c = (f-32)*5/9;
-
+	var c = (f-32)*5/9;
 
 	//  update the page
-
-
-	fahrenheit.value = c;
+	celsius.value = c.toFixed();
 
 
 }
@@ -48,23 +68,15 @@ function fahrenheitToCelsius () {
 function celsiusToFahrenheit () {
 
 	console.log("fn celsiusToFahrenheit");
-
 	// get data from page
-
 	var c = parseInt(celsius.value);
 	console.log("c:",c);
 
-
-
 	// do some work / processing
-
 		var f = (c*9/5)+32;
 
-
-
 	//  update the page
-
-
-	celsius.value = f;
+	fahrenheit.value = f.toFixed();
 
 }
+

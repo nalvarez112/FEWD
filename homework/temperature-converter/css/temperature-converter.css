@@ -27,6 +27,7 @@ header {
 	font-family: 'gotham', arial;
 	letter-spacing: 2px;
 	font-size:33px;
+	text-transform: uppercase;
 }
 
 p {
@@ -60,4 +61,25 @@ input {
     border: 3px solid #9087DD;
     text-transform: uppercase;
     font-size: 24px;
+}
+
+
+
+
+
+
+@media (max-width: 500px){
+
+	header {
+		font-size: 18px;
+
+	}
+
+	.container {
+		flex-direction: column;
+	}
+
+	p {
+	text-align: center;
+}
 }
