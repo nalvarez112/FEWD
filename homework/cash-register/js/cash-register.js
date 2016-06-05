@@ -9,28 +9,59 @@ var input = document.querySelector("input");
 console.log("Structure Running")
 
 // Setup
-// ------------------------------------------------
-	function createItem (){
-		console.log("fn createItem")
+// -----------------------------------------------
 
-		var item = document.createElement ("li");
-		item.textContent = ????????????????????????????????? ;
-		entries.appendChild(item);
-
-	}
-		console.log("working...")
-
+var price = []
 // Events
 // ------------------------------------------------
-	input.addEventListener('keypress', createItem);
-		console.log("okay...")
+	input.addEventListener('keypress', typePrice);
+		console.log("event listener typePrice");
 
 // Event handler functions
 // ------------------------------------------------
+	function typePrice (e) {
+
+		console.log("fn typePrice");
+		console.log(e);
+		
+		// error validation - return early if blank
+		if (e.keyCode ==13) {
+			// prevet defualt event to prevent behavior to keep form from submitting
+			e.preventDefault();
+
+			// run function to add LI to the line
+
+			pushPrice(input.value);
+
+			// Update the price
+
+			updatePrice();
+
+
+			input.value="";
+		}
+		
+
+	}
+		
 
 
 // Update page functions
 // ------------------------------------------------
+
+
+
+		function pushPrice (price){
+			var li = document.createElement('li')
+			li.textContent = "$" + price;
+			entries.appendChild(li);
+		}
+
+
+		function updatePrice () {
+			var zero = 0;
+
+		}
 
 
 // Utility functions
