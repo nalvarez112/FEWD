@@ -11,11 +11,13 @@ console.log("Structure Running")
 // Setup
 // -----------------------------------------------
 
-var price = []
+var price = [];
+var total = 0;
+
 // Events
 // ------------------------------------------------
 	input.addEventListener('keypress', typePrice);
-		console.log("event listener typePrice");
+		console.log("typePrice");
 
 // Event handler functions
 // ------------------------------------------------
@@ -25,7 +27,7 @@ var price = []
 		console.log(e);
 		
 		// error validation - return early if blank
-		if (e.keyCode ==13) {
+		if (e.keyCode == 13) {
 			// prevet defualt event to prevent behavior to keep form from submitting
 			e.preventDefault();
 
@@ -52,16 +54,27 @@ var price = []
 
 
 		function pushPrice (price){
-			var li = document.createElement('li')
+			var li = document.createElement('li');
 			li.textContent = "$" + price;
+			var price = parseInt(input.value)
 			entries.appendChild(li);
 		}
 
+		function updatePrice(){
+			console.log("updatePrice");
+			
 
-		function updatePrice () {
-			var zero = 0;
+			for (var i=0; i <= price.length; i++) {
+
+				total += parseInt(price[i]);
+			}
+
+			total.textContent = "$" +i;
+
 
 		}
+
+		
 
 
 // Utility functions
