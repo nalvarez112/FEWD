@@ -64,13 +64,12 @@ var total = 0;
 			console.log("updatePrice");
 			
 
-			for (var i=0; i <= price.length; i++) {
+			for (var i = 0; i <= price.length; i++) {
 
-				total += parseInt(price[i]);
+				total = total + parseInt(price[i]);
 			}
 
-			total.textContent = "$" +i;
-
+			total.textContent = "$" + i;
 
 		}
 
