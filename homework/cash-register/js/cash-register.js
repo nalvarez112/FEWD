@@ -12,7 +12,6 @@ console.log("Structure Running")
 // -----------------------------------------------
 
 var price = [];
-var total = 0;
 
 // Events
 // ------------------------------------------------
@@ -63,10 +62,12 @@ var total = 0;
 		function updatePrice(){
 			console.log("updatePrice");
 			
+			var finalTotal = 0;
 
 			for (var i = 0; i <= price.length; i++) {
 
-				total = total + parseInt(price[i]);
+				finalTotal = finalTotal + parseInt(price[i]);
+				console.log(price[i])
 			}
 
 			total.textContent = "$" + i;
