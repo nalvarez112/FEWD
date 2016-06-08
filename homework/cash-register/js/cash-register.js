@@ -33,6 +33,7 @@ var price = [];
 			// run function to add LI to the line
 
 			pushPrice(input.value);
+			price.push(input.value);
 
 			// Update the price
 
@@ -41,7 +42,6 @@ var price = [];
 
 			input.value="";
 		}
-		
 
 	}
 		
@@ -55,24 +55,39 @@ var price = [];
 		function pushPrice (price){
 			var li = document.createElement('li');
 			li.textContent = "$" + price;
-			var price = parseInt(input.value)
+			var price = parseInt(input.value);
 			entries.appendChild(li);
 		}
 
+
+
 		function updatePrice(){
 			console.log("updatePrice");
-			
-			var finalTotal = 0;
 
-			for (var i = 0; i <= price.length; i++) {
+			var newTotal = 0
 
-				finalTotal = finalTotal + parseInt(price[i]);
-				console.log(price[i])
+			for (var index = 0; index <= items.length - 1; index = index + 1) {
+			newTotal = newTotal + parseFloat(price[index]);
+		
+
 			}
 
-			total.textContent = "$" + i;
+			total.textContent = "$" + newTotal;
 
-		}
+	}
+
+			
+		// 	var finalTotal = 0;
+
+		// 	for (var i = 0; i <= price.length; i++) {
+
+		// 		finalTotal = finalTotal + parseInt(price[i]);
+		// 		console.log(price[i]);
+		// 	}
+
+		// 	total.textContent = "$" + i;
+
+		// }
 
 		
 
