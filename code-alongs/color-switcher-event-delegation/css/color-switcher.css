@@ -1,0 +1,46 @@
+.container {
+	padding: 50px;
+}
+
+
+.olive {
+	background: olive;
+	color: white
+}
+
+.skyblue {
+	background: skyblue;
+	color: darkcyan;
+}
+
+.burlywood {
+	background: burlywood;
+	color:purple;
+}
+
+.thistle {
+	background: thistle;
+	color:brown;
+	
+}
+
+h1,
+ul,
+p {
+	margin-bottom: 25px;
+}
+
+ul {
+	display: flex;
+	justify-content: flex-start;
+	list-style-type: none;
+}
+
+li {
+	width: 50px;
+	height: 50px;
+	margin-right: 15px;
+	border: 3px solid #000;
+	border-radius: 50%;
+	text-indent: -99999px;
+}
