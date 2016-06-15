@@ -15,6 +15,7 @@ form.addEventListener("submit", addTask);
 
 
 
+
 // Event handler functions
 // ------------------------------------------------
 
@@ -24,8 +25,6 @@ function addTask (e){
 
 	if (task.value == ""){
 		return;
-
-		createTask();
 	}
 
 
@@ -42,12 +41,12 @@ function addTask (e){
 	
 
 	// Create a Task
-	var taskName = document.createElement("p");
+	var taskName = document.createElement("span");
 		taskName.className = "task-Name";
 		console.log("task name created");
 
 	// Create a Date
-	var dateDue = document.createElement("p");
+	var dateDue = document.createElement("span");
 		dateDue.className = "date-due";
 		console.log("date picked")
 
@@ -65,6 +64,8 @@ function addTask (e){
 	li.appendChild(taskName);
 	li.appendChild(dateDue);
 
+	form.reset();
+
 	
 
 }
@@ -76,7 +77,12 @@ function addTask (e){
 // Utility functions
 // ------------------------------------------------
 
+// if (checkbox.checked) {
+//             ol.removeChild(li);
+//         }
 
+
+	
 
 
 

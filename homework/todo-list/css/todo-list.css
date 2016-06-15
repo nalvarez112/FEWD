@@ -27,6 +27,12 @@ h1 {
 	height: auto;
 }
 
+
+form {
+	display: flex;
+    justify-content: space-around;
+}
+
 input {
 	width: 200px;
 	height: 35px;
@@ -61,6 +67,8 @@ input[type=date]:-moz-selection {
 	color:#B8C052;
 }
 
+
+
 button {
 	padding:10px;
 	height: 35px;
@@ -77,8 +85,34 @@ button {
 }
 
 
+ol {
+
+	margin:25px 0;
+}
 
 
+li {
+	display:flex;
+	justify-content: flex-start;
+	font-family: monospace, sans-serif;
+}
+
+span {
+	margin-right: 25px;
+}
+
+
+
+
+.task-checkbox{
+	width:auto;
+	height:20px;
+}
+
+
+.date-due {
+	color:#CFCFCF;
+}
 
 
 
