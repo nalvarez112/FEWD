@@ -14,8 +14,6 @@ var ol = document.querySelector("ol");
 form.addEventListener("submit", addTask);
 
 
-
-
 // Event handler functions
 // ------------------------------------------------
 
@@ -71,16 +69,24 @@ function addTask (e){
 }
 
 
+//put even on ul and listen for li creation
+//----------------------
+var taskCheckbox = document.querySelector(".task-checkbox");
+taskCheckbox.addEventListener('click', removeTask)
+
+function removeTask(){
+if (taskCheckbox.checked) {
+      ol.removeChild(li);
+     }
+}
+
 
 
 
 // Utility functions
 // ------------------------------------------------
 
-// if (checkbox.checked) {
-//             ol.removeChild(li);
-//         }
-
+// 
 
 	
 
