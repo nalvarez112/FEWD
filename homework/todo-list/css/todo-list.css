@@ -1,1 +1,86 @@
-todo-list.css
+
+
+body {
+	background: #F6EB06;
+
+}
+
+header {
+	background: #D92855;
+	text-align: center;
+	color:#403E39;
+	font-size: 36px;
+	font-family: 'Dosis', sans-serif;
+	letter-spacing: 5px;
+}
+
+h1 {
+	padding:35px 15px;
+}
+
+.list-area {
+	max-width: 600px;
+	margin: 25px auto;
+	padding:25px;
+	border:2px solid #A36D4C;
+	border-radius: 10px;
+	height: auto;
+}
+
+input {
+	width: 200px;
+	height: 35px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    box-shadow: none;
+    margin-right: 15px;
+    border:0;
+    font-family: monospace, sans-serif;
+    letter-spacing: 2px;
+}
+
+input:focus {
+	outline:none;
+	
+}
+
+
+input[type=date] {
+  
+  color: #E77840;
+  border:0;
+  
+}
+
+input[type=date]:selection{
+	color:#B8C052;
+}
+
+input[type=date]:-moz-selection {
+	color:#B8C052;
+}
+
+button {
+	padding:10px;
+	height: 35px;
+	width:100px;
+	border-radius: 10px;
+	border:0px;
+	text-transform: uppercase;
+	background: #a7ca2e;
+	font-family: monospace, sans-serif;
+	letter-spacing: 2px;
+	font-weight: bold;
+	font-size: 14px
+
+}
+
+
+
+
+
+
+
+
+
