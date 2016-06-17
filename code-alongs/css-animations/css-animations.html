@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		CSS ANIMATIONS
+	</title>
+</head>
+<body>
+
+<h1>Css Animation</h1>
+
+
+<div class="ball"></div>
+
+
+
+
+
+<style>
+
+.ball {
+	position: absolute;
+	top: 100px;	
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background:orange;
+}
+
+
+.bouncing {
+	animation: bouncing 5s infinite alternate;
+}
+
+
+@keyframes bouncing {
+	from { 
+		transform: translateX(0px) scaleY(1);
+		background: brown;
+	}
+
+	25% {
+
+		transform: translateX(100px) translateY(-40px) scaleY(0.8);
+		background: pink;
+
+	}
+
+	50% {
+
+		transform: translateX(200px) translateY(0px) scaleY(0.8);
+		background: pink;
+
+	}
+
+
+	75% {
+
+		transform: translateX(300px) translateY(-40px) scaleY(0.8);
+		background: pink;
+
+	}
+
+	to { 
+		transform: translateX(400px) scaleY(0.8);
+		background: blue;
+		 }
+
+
+}
+
+
+</style>
+
+<script>	
+var ball = document.querySelector(".ball");
+ball.addEventListener('click', bounce);
+function bounce (){
+	ball.classList.toggle('bouncing');
+}
+</script>
+</body>
+</html>

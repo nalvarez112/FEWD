@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS TRANSITIONS</title>
+	<meta charset="utf-8">
+
+
+<style>
+
+
+div{
+
+	transition: all 2s ease;
+}
+
+
+.square{
+	width: 100px;
+	height: 100px;
+	background: #936c71;
+}
+
+
+.pink {
+	background: pink;
+	border-radius:50%;
+
+}
+
+.circle {
+	width: 150px;
+	height: 150px;
+	background: #D92855;
+	border-radius:50%;
+}
+
+
+.original {
+	background:purple;
+	border-radius:0;
+	border:2px solid pink;
+}
+
+
+section {
+	line-height: 50px;
+	width: 100px;
+	background:thistle;
+	text-align: center;
+}
+
+.container {
+	overflow:hidden;
+}
+
+.close {
+	transform: translateY(-278px);
+}
+
+
+
+.cover{
+	transition: all 2s ease-out;
+
+}
+
+.spin {
+	transform: translateX(500px);
+}
+
+.wheel {
+	 width:150px;
+	 height: 150px;
+	 transition: all 3s ease;
+}
+
+.wheel img {
+	width: 100%;
+}
+
+.spin .wheel {
+	transform: rotate(360deg); 
+	transform-origin: 50% 50%;
+}
+
+
+
+</style>
+
+
+</head>
+<body>
+
+
+<aside class="cover">
+<aside class="wheel">
+	<img src="http://www.foxsports.com/content/dam/fsdigital/fscom/global/dev/static_resources/nba/teams/retina/9.png">
+</aside>
+</aside>
+
+<div class="square"></div>
+<div class="circle"></div>
+
+<section class="blog-tab">Blog</section>
+<div class="container">
+	<div class="blog-content close">
+		<p>
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		</p>
+	</div>
+</div>
+
+
+
+
+<script>
+
+
+var cover = document.querySelector(".cover");
+var wheel = document.querySelector(".wheel");
+
+wheel.addEventListener('click', spin);
+function spin(){
+	cover.classList.toggle("spin");
+}
+
+
+	
+// - CHANGING TO ONE STATE
+var square = document.querySelector(".square");
+var circle = document.querySelector(".circle")
+
+square.addEventListener('click', roundIt);
+circle.addEventListener('click', boxIt);
+
+
+function roundIt () {
+	console.log("fn roundIt");
+	square.classList.add('pink');
+}
+
+
+function boxIt(){
+	console.log("fn boxIt");
+	circle.classList.toggle('original')
+}
+
+// CHANGING BACK TO ORGINAL STATE - TOGGLE - JS CSS CLASS LIST API
+
+
+var blogTab = document.querySelector(".blog-tab");
+var blogContent = document.querySelector(".blog-content");
+
+blogTab.addEventListener('click', showBlogTab);
+
+function showBlogTab (){
+	blogContent.classList.toggle('close')
+}
+
+
+
+</script>
+
+</body>
+</html>
