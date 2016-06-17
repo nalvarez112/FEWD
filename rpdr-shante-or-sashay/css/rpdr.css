@@ -1,0 +1,43 @@
+
+
+/*GENERAL STYLING*/
+
+
+/*can't get background to show through files*/
+body {
+	background-image: url('http://retrominder.tv/assets/img/bg/fond_bleu.jpg');
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+	color:#fff;
+	text-shadow: 2px 2px #666;
+	font-family: 'Expressa Serial', arial;
+
+}
+
+
+
+/*HEADER STYLING*/
+
+header{
+}
+
+header h1{
+	margin:25px auto;
+	width: 25%
+}
+header h1 img {
+width: 100%;
+}
+
+
+/*CONTANER STYLING*/
+
+
+
+
+/*FOOTER STYLING*/
