@@ -16,7 +16,19 @@ var seasonScreen = document.querySelector(".season-screen");
 var questionScreen = document.querySelector(".question-screen");
 var finalScreen = document.querySelector(".final-screen");
 
+// Enter on Start Screen
 
+// Start Button Event
+
+// var startButton = document.querySelector(".start-button");
+// startButton.addEventListener('click', toSeasons);
+
+// 	function toSeason (){
+// 		startScreen.classList.add('hide');
+// 	}
+
+
+// SWITCH SCREENS
 function showScreen(screen) {
 	startScreen.classList.add('hide');
 	seasonScreen.classList.add('hide');
@@ -32,7 +44,7 @@ function showScreen(screen) {
 };
 
 
-showScreen('startScreen');
+showScreen('seasonScreen');
 
 
 
