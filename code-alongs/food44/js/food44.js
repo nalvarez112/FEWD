@@ -33,3 +33,5 @@ function createRestaurant (restaurant) {
 	results.appendChild(li);
 
 }
+
+updateRestaurants(json.objects);
