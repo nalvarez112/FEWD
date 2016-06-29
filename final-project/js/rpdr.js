@@ -7,25 +7,44 @@ var questionArea = document.querySelector(".question-area");
 var question = document.querySelector(".question");
 var choice = document.querySelector(".choice");
 
-
-
-
-
 var startScreen = document.querySelector(".start-screen");
 var seasonScreen = document.querySelector(".season-screen");
 var questionScreen = document.querySelector(".question-screen");
 var finalScreen = document.querySelector(".final-screen");
 
-// Enter on Start Screen
+// STEP 1: Enter on Start Screen
 
-// Start Button Event
 
-// var startButton = document.querySelector(".start-button");
-// startButton.addEventListener('click', toSeasons);
 
-// 	function toSeason (){
-// 		startScreen.classList.add('hide');
-// 	}
+// STEP 2: Start Button Event
+
+var startButton = document.querySelector(".start-button");
+startButton.addEventListener('click', clickedStartButton);
+
+// STEP 3: MOVE TO CHOOSE YOUR SEASON SCREEN
+function clickedStartButton (e){
+	showScreen('seasonScreen');
+}
+
+// STEP 4: SEASON GAME BEGINS
+var options = document.querySelector(".options")
+options.addEventListener('click', beginGame);
+
+function beginGame (e) {
+	var target = e.target;
+	console.log(e.target, e.type);
+
+	if (target.className != 'season1'){
+		
+	}
+}
+
+
+// STEP 5: GAME INTERACTIONS
+
+
+
+
 
 
 // SWITCH SCREENS
@@ -42,7 +61,6 @@ function showScreen(screen) {
 		questionScreen.classList.remove('hide');
 	}
 };
-
 
 showScreen('seasonScreen');
 

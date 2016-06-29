@@ -129,6 +129,25 @@ h3 {
 }
 
 
+.season-choices .options {
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+	margin:15px auto;
+	max-width:575px;
+}
+
+
+.season-choices .options li {
+	width:25%;
+	padding:10px;
+}
+
+.season-choices .options img {
+	width:100%;
+	border-radius: 50%;
+    box-shadow: 0px 0px 10px 10px #ea2d85;
+}
 
 /*---QUESTION SCREEN STYLING---*/
 
@@ -169,7 +188,7 @@ h3 {
 
 
 
-ul,ol {
+.question-area ul {
 	list-style-type: none;
 	display: flex;
 	justify-content: space-between;
@@ -177,20 +196,20 @@ ul,ol {
 }
 
 
-li {
-	flex: 1;
+.question-area ul li {
+	width:25%;
 
 }
 
-li img {
-	width: 75%;
+.question-area ul li img {
+	width: 100%;
     border-radius: 50%;
     box-shadow: 0px 0px 10px 10px #ea2d85;
     margin-bottom: 15px;
 
 }
 
-li p {
+.question-area ul li p {
 	text-align: center;
     color: #ea2d85;
     letter-spacing: 2px;
@@ -199,13 +218,13 @@ li p {
 
 }
 
-li img:hover {
+.question-area ul li img:hover {
 
     box-shadow: 0px 0px 10px 10px #03c4e4;
 
 }
 
-li p:hover {
+.question-area ul li p:hover {
     color: #03c4e4;
 }
 
