@@ -15,7 +15,6 @@ var finalScreen = document.querySelector(".final-screen");
 // STEP 1: Enter on Start Screen
 
 
-
 // STEP 2: Start Button Event
 
 var startButton = document.querySelector(".start-button");
@@ -27,18 +26,26 @@ function clickedStartButton (e){
 }
 
 // STEP 4: SEASON GAME BEGINS
-var options = document.querySelector(".options")
-options.addEventListener('click', beginGame);
+var mainWrapper = document.querySelector("#main-wrapper")
+var thumbnails = document.querySelectorAll(".thumbnails")
+mainWrapper.addEventListener('click', beginGame);
 
 function beginGame (e) {
-	var target = e.target;
 	console.log(e.target, e.type);
+	
+	var target = e.target;
+	console.log(e);
 
-	if (target.className != 'season1'){
-		
+	if (target.className != 'season2'){
+		seasonScreen.classList.add('hide');
+		// go to question screen
+		questionScreen.classList.remove('hide');
+		// access season 2 questions
+
 	}
 }
 
+// toggle questions to hide and show
 
 // STEP 5: GAME INTERACTIONS
 
@@ -62,7 +69,7 @@ function showScreen(screen) {
 	}
 };
 
-showScreen('seasonScreen');
+showScreen('startScreen');
 
 
 

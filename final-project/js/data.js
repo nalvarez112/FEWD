@@ -1,6 +1,6 @@
-var seasons = ["season 8"];
+console.log("data works");
 
-
+var seasons = ["season 8", "season 7", "season 6"];
 
 // SEASONS + CAST IMAGE
 // ------------------------------------------
@@ -15,7 +15,12 @@ var seasons = ["season 8"];
 // QUESTIONS PER SEASON
 // ------------------------------------------
 
-var question1 = {
+// season eight questions
+// ----------------------
+var sEightQuestion =[ eight1,
+];
+
+var eight1 = {
 	question: "Who was the 100th queen to walk into the workroom?",
 	image: "",
 	choice: ["Bob The Drag Queen", "Chi Chi Devayne", "Acid Betty", "Derek Berry"],
