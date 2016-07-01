@@ -1,0 +1,39 @@
+body {
+	background: #f3f3f3;
+	font-family: 'Dosis', sans-serif;
+
+}
+
+header {
+	background: #b4b4b4;
+	text-align: center;
+	color:#403E39;
+	font-size: 36px;
+	font-family: 'Dosis', sans-serif;
+	letter-spacing: 5px;
+}
+
+h1 {
+	padding:35px 15px;
+}
+
+header p {
+	font-size: 12px;
+
+
+}
+
+
+input {
+	padding:10px;
+	font-size: 20px;
+	margin-top: 25px;
+	margin-left: 25px;
+}
+
+.results li {
+	padding: 50px;
+	border-bottom: 1px solid #403E39;
+}
+
+

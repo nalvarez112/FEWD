@@ -4,13 +4,15 @@
 var gameShow = document.querySelector(".game-show");
 var rupaul = document.querySelector(".rupaul");
 var questionArea = document.querySelector(".question-area");
-var question = document.querySelector(".question");
-var choice = document.querySelector(".choice");
+var questionText = document.querySelector(".question");
 
 var startScreen = document.querySelector(".start-screen");
 var seasonScreen = document.querySelector(".season-screen");
 var questionScreen = document.querySelector(".question-screen");
 var finalScreen = document.querySelector(".final-screen");
+
+var currentSeason = null;
+var currentQuestion = null;
 
 // STEP 1: Enter on Start Screen
 
@@ -25,25 +27,70 @@ function clickedStartButton (e){
 	showScreen('seasonScreen');
 }
 
-// STEP 4: SEASON GAME BEGINS
+// STEP 4: PICK THE SEASON
 var mainWrapper = document.querySelector("#main-wrapper")
 var thumbnails = document.querySelectorAll(".thumbnails")
-mainWrapper.addEventListener('click', beginGame);
+for (var i = 0; i < thumbnails.length; i++) {
+    thumbnails[i].addEventListener('click', pickSeason);
+}
 
-function beginGame (e) {
-	console.log(e.target, e.type);
+function pickSeason (e) {
 	
 	var target = e.target;
-	console.log(e);
 
-	if (target.className != 'season2'){
-		seasonScreen.classList.add('hide');
-		// go to question screen
-		questionScreen.classList.remove('hide');
-		// access season 2 questions
+	if (target.tagName != 'LI'){
+		target = target.closest("li");  
+	}
+	console.log('season', target.dataset.season);
+	startSeason(target.dataset.season);
+	currentSeason = parseInt(target.dataset.season);
+
+
+}
+
+function startSeason (season) {
+	console.log('startSeason', season);
+	showScreen('questionScreen');
+	showQuestion(seasons[season]);
+
+}
+
+function showQuestion (seasonData) {
+	console.log(seasonData);
+	var seasonQuestions = document.querySelector('.season-questions');
+
+	// questionText.textContent = "";
+	// seasonQuestions.innerHTML = "";
+
+	for (i = 0; i < seasonQuestions.children.length; i++) {
 
 	}
+	currentQuestion = 1;
 }
+
+
+var choices = document.querySelectorAll(".choice")
+for (var i = 0; i < choices.length; i++) {
+    choices[i].addEventListener('click', pickChoice);
+}
+
+function pickChoice (e){
+	var target = e.target;
+
+	if (target.tagName != 'LI') {
+		target = target.closest('li');
+	}
+	console.log('choice', target.dataset.choice);
+	var choice = target.dataset.choice;
+
+	if (choice == seasons[currentSeason].questions[currentQuestion].answer) {
+		alert('yo win');
+	} else {
+		alert('yo loser');
+	}
+
+}
+
 
 // toggle questions to hide and show
 
@@ -69,7 +116,7 @@ function showScreen(screen) {
 	}
 };
 
-showScreen('startScreen');
+showScreen('seasonScreen');
 
 
 
