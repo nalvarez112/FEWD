@@ -139,8 +139,8 @@ h3 {
 
 
 .season-choices .options li {
-	width:25%;
-	padding:10px;
+	width:20%;
+	padding:0 15px;
 }
 
 .season-choices .options img {
@@ -197,7 +197,7 @@ h3 {
 
 
 .question-area ul li {
-	width:25%;
+	width:20%;
 
 }
 

@@ -51,22 +51,30 @@ function pickSeason (e) {
 function startSeason (season) {
 	console.log('startSeason', season);
 	showScreen('questionScreen');
-	showQuestion(seasons[season]);
+	beginQuestion(seasons[season]);
 
 }
 
-function showQuestion (seasonData) {
-	console.log(seasonData);
+function beginQuestion (seasonData) {
+	console.log('seasondata', seasonData);
 	var seasonQuestions = document.querySelector('.season-questions');
 
-	// questionText.textContent = "";
-	// seasonQuestions.innerHTML = "";
+	questionText.textContent = "";
+	seasonQuestions.innerHTML = "";
+	// for (i = 0; i < seasonQuestions.children.length; i++) {
 
-	for (i = 0; i < seasonQuestions.children.length; i++) {
-
-	}
-	currentQuestion = 1;
+	// }
+	// currentQuestion = sea;
 }
+
+function createQuestion (toAnswer){
+	var li = document.createElement('li');
+	var h2 = document.createElement('h2');
+	var p = document.createElement('p');
+	var a = document.createElement('a');
+
+}
+
 
 
 var choices = document.querySelectorAll(".choice")
@@ -90,13 +98,6 @@ function pickChoice (e){
 	}
 
 }
-
-
-// toggle questions to hide and show
-
-// STEP 5: GAME INTERACTIONS
-
-
 
 
 
