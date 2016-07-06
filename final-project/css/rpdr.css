@@ -2,25 +2,42 @@
 
 /*GENERAL STYLING*/
 
-
-
-.tv-border {
+.tv-border,
+.screens,
+.video-background {
   position: absolute;
   top: 0px;
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background: url("../img/assets/tv-border.png");
-  -webkit-background-size: 100% 100%;
-  background-size: 100% 100%;
-  z-index: 100;
-  pointer-events: none;
-
 }
 
 
 
+.tv-border {
+  background: url("../img/assets/tv-border.png");
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  z-index: 300;
+  pointer-events: none;
 
+}
+
+.screens {
+  z-index: 200;
+}
+
+.video-background {
+  z-index: 100;
+  width: 100%
+}
+
+.video-background video {
+	width: 100%;
+	height: 100vh;
+	margin-left:auto;
+	margin-right: auto;
+}
 
 .hide {
 	display: none;
@@ -157,14 +174,18 @@ h3 {
 	color:#fff;
 }
 
-.rupaul{
+.rupaul-season, 
+.rupaul-question{
 	flex: 1;
 	height: 100%;
+	max-width: 600px;
 }
 
-.rupaul img {
+.rupaul-season img, 
+.rupaul-question img {
 	height: 100%;
 	padding:25px;
+	margin:0 auto;
 }
 
 .question-area {

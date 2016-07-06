@@ -13,8 +13,14 @@
 
 <div class="container">
 <div class="tv-border"></div>
-	
 
+
+<div class="video-background">
+	<video src="img/assets/rpdr.mp4" autoplay poster=""></video>
+</div>
+
+
+<div class="screens">
 	<!-- START SCREEN -->
 
 	<section class="start-screen screen">
@@ -30,8 +36,8 @@
 	<section class="season-screen screen">
 		<div class="season-area">
 
-			<div class="rupaul">
-				<img src="img/rupaul/rupaul5.png">
+			<div class="rupaul-season">
+				<img src="img/rupaul/rupaul6.png">
 			</div>
 
 			<div class="season-choices">
@@ -91,33 +97,24 @@
 	<section class="question-screen screen">
 		<div class="game-show">
 
-			<div class="rupaul">
+			<div class="rupaul-question">
 				<img src="img/rupaul/rupaul1.png">
 			</div>
 
 			<div class="question-area">
 				<h1><img src="img/assets/logo-v1.png" alt="RPDR: Shanty of Sashay"></h1>
 				<h2>Season 8</h2>
-				<h3>Question <span>1</span></h3>
-				<p class="question">Which queen was told she had a snaggle tooth and a jacked up hair line during the wizard of oz challenge?</p>
+				<h3 class="question-number"></h3>
+				<p class="question"></p>
 
-				<ul class="season-questions">
+				<ul class="choices">
 					<li class="choice" data-choice="0">
-						<img src="img/season8/bob_the_drag_queen.jpg">
-						<p>Bob The Drag Queen</p>
+						<!-- <img src="img/season8/bob_the_drag_queen.jpg">
+						<p>Bob The Drag Queen</p> -->
 					</li>
-					<li class="choice" data-choice="1">
-						<img src="img/season8/thorgy_thor.jpg">
-						<p>Thorgy Thor</p>
-					</li>
-					<li class="choice" data-choice="2">
-						<img src="img/season8/naomi_smalls.jpg">
-						<p>Naomi Smalls</p>
-					</li>
-					<li class="choice" data-choice="3">
-						<img src="img/season8/nysha_lopez.jpg">
-						<p>Nysha Lopez</p>
-					</li>
+					<li class="choice" data-choice="1">	</li>
+					<li class="choice" data-choice="2"></li>
+					<li class="choice" data-choice="3"></li>
 				</ul>
 			</div>
 		</div>
@@ -125,10 +122,12 @@
 	</section>
 
 	<!-- FINAL SCREEN -->
-	<section class="final-screen">
+	<section class="final-screen screen">
 
 
 	</section>
+
+</div><!-- /.screens -->
 
 <script src="js/data.js"></script>
 <script src="js/rpdr.js"></script>

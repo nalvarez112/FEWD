@@ -1,33 +1,52 @@
 // SET UP VARIABLES 
 // ------------------------------------------
 
+
+var rupaulSeason = document.querySelector(".rupaul-season");
+var rupaulQuestion = document.querySelector(".rupaul-question");
+
+
+// start screen
+var startScreen = document.querySelector(".start-screen");
+
+
+// question screen
+var questionScreen = document.querySelector(".question-screen");
 var gameShow = document.querySelector(".game-show");
-var rupaul = document.querySelector(".rupaul");
 var questionArea = document.querySelector(".question-area");
 var questionText = document.querySelector(".question");
-
-var startScreen = document.querySelector(".start-screen");
 var seasonScreen = document.querySelector(".season-screen");
-var questionScreen = document.querySelector(".question-screen");
+var choices = document.querySelector('.choices');
+var qOptions = document.querySelectorAll(".choice")
+var questionNumber = document.querySelector('.question-number');
+
+
+// final creen
 var finalScreen = document.querySelector(".final-screen");
 
+// set up
 var currentSeason = null;
 var currentQuestion = null;
 
-// STEP 1: Enter on Start Screen
 
-
-// STEP 2: Start Button Event
-
+// START BUTTON FUNCTION
+// ------------------------------------------------------
 var startButton = document.querySelector(".start-button");
 startButton.addEventListener('click', clickedStartButton);
 
-// STEP 3: MOVE TO CHOOSE YOUR SEASON SCREEN
+// MOVE TO CHOOSE YOUR SEASON SCREEN
+// ------------------------------------------------------
+
 function clickedStartButton (e){
 	showScreen('seasonScreen');
 }
 
-// STEP 4: PICK THE SEASON
+
+
+
+// PICK THE SEASON
+// ------------------------------------------------------
+
 var mainWrapper = document.querySelector("#main-wrapper")
 var thumbnails = document.querySelectorAll(".thumbnails")
 for (var i = 0; i < thumbnails.length; i++) {
@@ -35,64 +54,49 @@ for (var i = 0; i < thumbnails.length; i++) {
 }
 
 function pickSeason (e) {
-	
 	var target = e.target;
-
 	if (target.tagName != 'LI'){
 		target = target.closest("li");  
 	}
 	console.log('season', target.dataset.season);
-	startSeason(target.dataset.season);
 	currentSeason = parseInt(target.dataset.season);
-
-
+	startSeason();
+	randomRu();
 }
 
 function startSeason (season) {
 	console.log('startSeason', season);
 	showScreen('questionScreen');
-	beginQuestion(seasons[season]);
-
+	currentQuestion = 1;
+	createQuestion(seasons[season]);
 }
 
-function beginQuestion (seasonData) {
-	console.log('seasondata', seasonData);
-	var seasonQuestions = document.querySelector('.season-questions');
+function createQuestion (){
+	questionNumber.textContent = "Question " + currentQuestion;
+	questionText.textContent = seasons[currentSeason].questions[currentQuestion].question;
+	choices.innerHTML = "";
+	var currentChoices = seasons[currentSeason].questions[currentQuestion].choices;
 
-	questionText.textContent = "";
-	seasonQuestions.innerHTML = "";
-	// for (i = 0; i < seasonQuestions.children.length; i++) {
+	for (i = 0; i < currentChoices.length; i++) {
+		// create
+		var img = document.createElement('img');
+		var p = document.createElement('p');
+		var li = document.createElement('li');
+		
+		// Att content and attribute
+		img.src = currentChoices[i].image;
+		p.textContent = currentChoices[i].choice;
+		li.className = ".choice";
+		li.dataset.choice = i;
 
-	// }
-	// currentQuestion = sea;
-}
-
-function createQuestion (toAnswer){
-	// //setp 1: create markup
-	// var li = document.createElement('li');
-	// var h2 = document.createElement('h2');
-	// var p = document.createElement('p');
-	// var a = document.createElement('a');
-
-	// //step 2: create content
-	// h2.textContent = restaurant.name;
-	// p.textContent = restaurant.street_address;
-	// a.textContent = restaurant.phone;
-	// a.setAttribute('href', "tel:" + restaurant.phone)
-	
-	// // append
-	// li.appendChild(h2);
-	// li.appendChild(p);
-	// li.appendChild(a);
-	// results.appendChild(li);
-
-}
-
-
-
-var choices = document.querySelectorAll(".choice")
-for (var i = 0; i < choices.length; i++) {
-    choices[i].addEventListener('click', pickChoice);
+		// append
+		li.appendChild(img);
+		li.appendChild(p);
+		li.addEventListener('click', pickChoice);
+		choices.appendChild(li);
+		console.log('createQuestion', currentQuestion);
+	}
+	randomRu();
 }
 
 function pickChoice (e){
@@ -105,14 +109,26 @@ function pickChoice (e){
 	var choice = target.dataset.choice;
 
 	if (choice == seasons[currentSeason].questions[currentQuestion].answer) {
-		alert('yo win');
+		alert('you win');
 	} else {
-		alert('yo loser');
+		alert('you loser');
+	}
+
+	nextQuestion();
+}
+
+function nextQuestion(){
+	currentQuestion++;
+	console.log(seasons[currentSeason].questions.length, 'current question', currentQuestion)
+	if (currentQuestion < seasons[currentSeason].questions.length) {
+	
+		createQuestion();
+
+	} else {
+		showScreen('finalScreen');
 	}
 
 }
-
-
 
 
 // SWITCH SCREENS
@@ -127,14 +143,29 @@ function showScreen(screen) {
 		seasonScreen.classList.remove('hide');
 	} else if (screen == 'questionScreen'){
 		questionScreen.classList.remove('hide');
-	}
+	} else if (screen == 'finalScreen');
+		finalScreen.classList.remove('hide');
 };
 
-showScreen('seasonScreen');
+showScreen('startScreen');
 
 
 
 
+
+function randomRu(){
+	rupaulSeason.innerHTML = "";
+	rupaulQuestion.innerHTML = "";
+
+	// create
+	var img = document.createElement('img');
+	// Att content and attribute
+	img.src = ru[Math.floor(Math.random()*ru.length)];
+	// append
+	rupaulSeason.appendChild(img);
+	rupaulQuestion.appendChild(img);
+
+}
 
 
 
