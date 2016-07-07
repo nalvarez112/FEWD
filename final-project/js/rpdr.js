@@ -19,6 +19,7 @@ var seasonScreen = document.querySelector(".season-screen");
 var choices = document.querySelector('.choices');
 var qOptions = document.querySelectorAll(".choice")
 var questionNumber = document.querySelector('.question-number');
+var seasonNumber = document.querySelector('.season-number');
 
 
 // final creen
@@ -69,9 +70,23 @@ function startSeason (season) {
 	showScreen('questionScreen');
 	currentQuestion = 1;
 	createQuestion(seasons[season]);
+	updateVideo();
+}
+
+function updateVideo(){
+
+	var videoBackground = document.querySelector(".video-background");
+	videoBackground.innerHTML = "";
+	var video = document.createElement('video');
+	video.src = seasons[currentSeason].song;
+	video.autoplay = true;
+	video.loop = true;
+	videoBackground.appendChild(video);
+
 }
 
 function createQuestion (){
+	seasonNumber.textContent = "Season " + currentSeason;
 	questionNumber.textContent = "Question " + currentQuestion;
 	questionText.textContent = seasons[currentSeason].questions[currentQuestion].question;
 	choices.innerHTML = "";
@@ -109,9 +124,9 @@ function pickChoice (e){
 	var choice = target.dataset.choice;
 
 	if (choice == seasons[currentSeason].questions[currentQuestion].answer) {
-		alert('you win');
+		alert('YAS');
 	} else {
-		alert('you loser');
+		alert('NO, GURL');
 	}
 
 	nextQuestion();

@@ -115,6 +115,12 @@ h3 {
 	border: none;
 	margin: 0 auto;
 	letter-spacing: 3px;
+	text-shadow: 2px 2px #000000
+}
+
+.start-screen button:focus {
+outline: none;
+border: none;
 }
 
 .start-screen button a {
@@ -122,6 +128,7 @@ h3 {
 	text-decoration: none;
 
 }
+
 
 
 /*--- SEASON SCREEN ---*/
@@ -166,6 +173,14 @@ h3 {
     box-shadow: 0px 0px 10px 10px #ea2d85;
 }
 
+.season-choices .options p {
+	font-family: 'Rock Salt', cursive;
+    font-size: 12px;
+    color: #02D0F2;
+    text-shadow: 1px 1px #000000
+
+}
+
 /*---QUESTION SCREEN STYLING---*/
 
 .game-show {
@@ -205,6 +220,7 @@ h3 {
     letter-spacing: 2px;
     font-size: 20px;
     margin:25px auto;
+    text-shadow: 1px 1px #000000
 }
 
 
@@ -236,6 +252,7 @@ h3 {
     letter-spacing: 2px;
     font-size: 12px;
    	font-family: 'Rock Salt', cursive;
+    text-shadow: 1px 1px #000000
 
 }
 
