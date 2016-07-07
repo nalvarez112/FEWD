@@ -294,26 +294,26 @@ var seasonAllstars = {
 
 var season5 = {
 	"name": "Season 5",
-	"song": "img/assets/songs/season5.mp4",
+	"song": "https://s3-us-west-1.amazonaws.com/shantay-you-stay/season5.mp4",
 	"questions": questions5
 };
 
 
 var season6 = {
 	"name": "Season 6",
-	"song": "img/assets/songs/season6.mp4",
+	"song": "https://s3-us-west-1.amazonaws.com/shantay-you-stay/season6.mp4",
 	"questions": questions6
 };
 
 var season7 = {
 	"name": "Season 7",
-	"song": "img/assets/songs/season7.mp4",
+	"song": "https://s3-us-west-1.amazonaws.com/shantay-you-stay/season7.mp4",
 	"questions": questions7
 };
 
 var season8 = {
 	"name": "Season 8",
-	"song": "img/assets/songs/season8.mp4",
+	"song": "https://s3-us-west-1.amazonaws.com/shantay-you-stay/season8.mp4",
 	"questions": questions8
 };
 
