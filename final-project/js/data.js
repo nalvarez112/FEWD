@@ -7,6 +7,17 @@ var ru = ["img/rupaul/rupaul1.png", "img/rupaul/rupaul2.png", "img/rupaul/rupaul
 
 
 
+//ALERTS
+// ------------------------------------------
+
+
+var goodSounds = ["img/assents/sounds/good/bam.mp3", "img/assents/sounds/good/eat-it.mp3", "img/assents/sounds/good/haleloo.mp3", "img/assents/sounds/good/hiieee.mp3", "img/assents/sounds/good/okurr.mp3", "img/assents/sounds/good/party.mp3", "img/assents/sounds/good/shantay-you-stay.mp3", "img/assents/sounds/good/you-better-work.mp3"]
+var badSounds = ["img/assents/sounds/good/loca.mp3", "img/assents/sounds/good/not-today-satan.mp3", "img/assents/sounds/good/sashay-away.mp3", "img/assents/sounds/good/shady-sound.mp3", "img/assents/sounds/good/the-time-has-come.mp3",]
+
+var goodImages = ["img/assents/alerts/good/amazing.png", "img/assents/alerts/good/great.png", "img/assents/alerts/good/perfect.png"];
+var badImages = ["img/assents/alerts/good/noway.png", "img/assents/alerts/good/toobad.png", "img/assents/alerts/good/wrong.png" ]
+
+
 // QUESTIONS PER SEASON
 // ------------------------------------------
 

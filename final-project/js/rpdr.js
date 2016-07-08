@@ -40,8 +40,15 @@ startButton.addEventListener('click', clickedStartButton);
 
 function clickedStartButton (e){
 	showScreen('seasonScreen');
+	
 }
 
+function playStartSound(){
+	var audio = document.createElement('audio');
+	audio.src = "img/assets/sounds/start-your-engines.mp3";
+	audio.autoplay = true;
+	seasonScreen.appendChild(audio);
+}
 
 
 
@@ -70,11 +77,17 @@ function startSeason (season) {
 	showScreen('questionScreen');
 	currentQuestion = 1;
 	createQuestion(seasons[season]);
-	updateVideo();
+	deleteVideo();
+	playStartSound();
+	window.setTimeout(updateVideo, 4000);
+}
+
+function deleteVideo(){
+	var videoBackground = document.querySelector(".video-background");
+	videoBackground.innerHTML = "";
 }
 
 function updateVideo(){
-
 	var videoBackground = document.querySelector(".video-background");
 	videoBackground.innerHTML = "";
 	var video = document.createElement('video');
@@ -112,6 +125,15 @@ function createQuestion (){
 		console.log('createQuestion', currentQuestion);
 	}
 	randomRu();
+}
+
+
+function popUpGood () {
+
+}
+
+function popUpBad () {
+	
 }
 
 function pickChoice (e){
