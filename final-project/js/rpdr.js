@@ -29,6 +29,10 @@ var finalScreen = document.querySelector(".final-screen");
 var currentSeason = null;
 var currentQuestion = null;
 
+var videoBackground = document.querySelector(".video-background");
+var video = document.querySelector(".video-background video");
+
+
 var alertOverlay = document.querySelector('.alert-overlay');
 var alertImage = document.querySelector('.alert-overlay img');
 
@@ -86,19 +90,11 @@ function startSeason (season) {
 }
 
 function deleteVideo(){
-	var videoBackground = document.querySelector(".video-background");
-	videoBackground.innerHTML = "";
+	video.src = '';
 }
 
 function updateVideo(){
-	var videoBackground = document.querySelector(".video-background");
-	videoBackground.innerHTML = "";
-	var video = document.createElement('video');
 	video.src = seasons[currentSeason].song;
-	video.autoplay = true;
-	video.loop = true;
-	videoBackground.appendChild(video);
-
 }
 
 function createQuestion (){
@@ -132,12 +128,8 @@ function createQuestion (){
 
 
 function popUpGood () {
-	var alertOverlay = document.querySelector('.alert-overlay');
-	var alertImage = document.querySelector('.alert-overlay img');
 	alertImage.src = goodImages[Math.floor(Math.random()*goodImages.length)];
 	alertOverlay.classList.remove('hide');
-
-
 }
 
 function popUpBad () {
