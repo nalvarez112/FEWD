@@ -4,7 +4,8 @@
 
 .tv-border,
 .screens,
-.video-background {
+.video-background,
+.alert-overlay {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -12,7 +13,16 @@
   bottom: 0px;
 }
 
+.alert-overlay {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 400;
 
+}
+.alert-overlay.hide {
+	display: none;
+}
 
 .tv-border {
   background: url("../img/assets/tv-border.png");

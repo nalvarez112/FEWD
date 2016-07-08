@@ -29,6 +29,9 @@ var finalScreen = document.querySelector(".final-screen");
 var currentSeason = null;
 var currentQuestion = null;
 
+var alertOverlay = document.querySelector('.alert-overlay');
+var alertImage = document.querySelector('.alert-overlay img');
+
 
 // START BUTTON FUNCTION
 // ------------------------------------------------------
@@ -129,11 +132,18 @@ function createQuestion (){
 
 
 function popUpGood () {
+	var alertOverlay = document.querySelector('.alert-overlay');
+	var alertImage = document.querySelector('.alert-overlay img');
+	alertImage.src = goodImages[Math.floor(Math.random()*goodImages.length)];
+	alertOverlay.classList.remove('hide');
+
 
 }
 
 function popUpBad () {
-	
+	alertImage.src = badImages[Math.floor(Math.random()*badImages.length)];
+	alertOverlay.classList.remove('hide');
+
 }
 
 function pickChoice (e){
@@ -146,15 +156,15 @@ function pickChoice (e){
 	var choice = target.dataset.choice;
 
 	if (choice == seasons[currentSeason].questions[currentQuestion].answer) {
-		alert('YAS');
+		popUpGood ();
 	} else {
-		alert('NO, GURL');
+		popUpBad ();
 	}
-
-	nextQuestion();
+	window.setTimeout(nextQuestion, 2000);
 }
 
 function nextQuestion(){
+	alertOverlay.classList.add('hide');
 	currentQuestion++;
 	console.log(seasons[currentSeason].questions.length, 'current question', currentQuestion)
 	if (currentQuestion < seasons[currentSeason].questions.length) {
