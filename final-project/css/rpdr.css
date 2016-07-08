@@ -5,7 +5,8 @@
 .tv-border,
 .screens,
 .video-background,
-.alert-overlay {
+.alert-overlay,
+.mute-button {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -13,6 +14,17 @@
   bottom: 0px;
 }
 
+
+.mute-button {
+	z-index: 500;
+}
+
+.mute-button img {
+	width: 25px;
+	position: absolute;
+    left: 95%;
+    bottom: 5%
+}
 .alert-overlay {
 	display: flex;
 	justify-content: center;

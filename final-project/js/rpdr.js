@@ -30,11 +30,26 @@ var currentSeason = null;
 var currentQuestion = null;
 
 var videoBackground = document.querySelector(".video-background");
-var video = document.querySelector(".video-background video");
+var video = document.querySelector("video");
 
 
 var alertOverlay = document.querySelector('.alert-overlay');
 var alertImage = document.querySelector('.alert-overlay img');
+
+var muteButton = document.querySelector('.mute-button');
+var muteImage = document.querySelector('.mute-button img')
+muteButton.addEventListener('click', mute);
+function mute (){ 
+	if (video.muted == false) {
+		video.muted = true;
+		muteImage.src = "img/assets/mute.png"
+	} else {
+		video.muted = false;
+		muteImage.src = "img/assets/unmute.png"
+
+	}
+
+}
 
 
 // START BUTTON FUNCTION
@@ -44,6 +59,8 @@ startButton.addEventListener('click', clickedStartButton);
 
 // MOVE TO CHOOSE YOUR SEASON SCREEN
 // ------------------------------------------------------
+
+
 
 function clickedStartButton (e){
 	showScreen('seasonScreen');
